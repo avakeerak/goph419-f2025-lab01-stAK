@@ -49,17 +49,24 @@ def sqrt(x):
     #use taylow series
 
 def arcsin(x):
+
+    tolerance  = 1 * 10**-8
+
+    sum_n = 0
+
+    n = 1
+
+    prev_sum = 0
     
-    for n in range(1, 20):
+    for n in range(1, 1000):
 
         fact_2n = 1
+        n2 = n * 2
 
-        for i in range(1, n + 1):
-            fact_2n *= 2 * i
+        for i in range(1, n2 + 1):
+            fact_2n *= i
 
         fact_n = 1
-
-        sum_n = 0
 
         for j in range(1, n + 1):
             fact_n *= j
@@ -72,7 +79,14 @@ def arcsin(x):
 
         sum_n += term_n
 
-        arcsin_x = sum_n * 0.5
+        arcsin_x2 = sum_n * 0.5
+
+        arcsin_x = sqrt(arcsin_x2)
+
+        if abs(arcsin_x - prev_sum) <= tolerance * abs(arcsin_x):
+            break
+
+        prev_sum = arcsin_x
 
     return arcsin_x
 
