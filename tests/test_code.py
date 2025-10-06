@@ -3,7 +3,7 @@ import numpy as np
 from python_package.functions import (sqrt, arcsin, launch_angle_range)
 
 # Test the launch_angle_range function and print the result
-print(launch_angle_range(2, 0.25, 0.02))
+print(f'Computed output: {launch_angle_range(7, 0.5, 0.02)}')
 
 def launch_angle_numpy(ve_v0, alpha, tol_alpha):
 
@@ -69,4 +69,4 @@ def launch_angle_numpy(ve_v0, alpha, tol_alpha):
     return np.array(phi_range)
 
 # Print the result from the NumPy-based function for comparison
-print(launch_angle_numpy(2, 0.25, 0.02))
+print(f'Expected output: {launch_angle_numpy(7, 0.5, 0.02)}')
