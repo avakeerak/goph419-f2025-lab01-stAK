@@ -22,7 +22,7 @@ def constant_ve_v0(ve_v0, tol_alpha):
     """
 
     # Create an array of alpha values from 0.01 to 3
-    a_values = np.linspace(0.01, 3, 500)
+    a_values = np.linspace(0.01, 2.5, 500)
 
     # Initialize lists to hold launch angles and failed alpha values
     min_angle = []
@@ -90,7 +90,7 @@ def constant_alpha(alpha, tol_alpha):
     """
 
     # Create an array of Ve/V0 values from 0 to 5
-    ve_v0_values = np.linspace(0, 5, 500)
+    ve_v0_values = np.linspace(0, 4, 500)
 
     # Initialize lists to hold launch angles and failed ve_v0 values
     min_angle = []
