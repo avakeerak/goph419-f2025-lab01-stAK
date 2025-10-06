@@ -198,7 +198,7 @@ def launch_angle_range(ve_v0, alpha, tol_alpha):
     phi_range = []
 
     # Calculate the range of allowable launch angles
-    for i in (alpha_max, alpha_min):
+    for i in (alpha_min, alpha_max):
 
         # Calculate the radicand and ensure it is non-negative
         radicand = 1 - ((i / (1 + i)) * (ve_v0 ** 2))
