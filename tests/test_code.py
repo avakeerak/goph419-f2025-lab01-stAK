@@ -3,7 +3,7 @@ import numpy as np
 from python_package.functions import (sqrt, arcsin, launch_angle_range)
 
 # Test the launch_angle_range function and print the result
-print(f'Computed output: {launch_angle_range(7, 0.5, 0.02)}')
+print(f'Computed output: {launch_angle_range(1.5, 0.3, 0.02)}')
 
 def launch_angle_numpy(ve_v0, alpha, tol_alpha):
 
@@ -51,7 +51,7 @@ def launch_angle_numpy(ve_v0, alpha, tol_alpha):
     phi_range = []
 
     # Calculate the range of allowable launch angles
-    for i in (alpha_max, alpha_min):
+    for i in (alpha_min, alpha_max):
 
         # Calculate the radicand and ensure it is non-negative
         radicand = 1 - ((i / (1 + i)) * (ve_v0 ** 2))
@@ -69,4 +69,4 @@ def launch_angle_numpy(ve_v0, alpha, tol_alpha):
     return np.array(phi_range)
 
 # Print the result from the NumPy-based function for comparison
-print(f'Expected output: {launch_angle_numpy(7, 0.5, 0.02)}')
+print(f'Expected output: {launch_angle_numpy(1.5, 0.3, 0.02)}')
