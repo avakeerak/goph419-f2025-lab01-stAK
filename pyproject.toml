@@ -7,7 +7,7 @@ version = "0.0.1"
 authors = [
 { name="Ava Keerak", email="ava.keerak@ucalgary.ca" },
 ]
-description=" "
+description="This repository provides the code for GOPH 419 Lab 1, which is adapted from Problem 4.18 in Chapra and Canale (2015). The purpose of this lab was to simulate a control system that determines the allowable launch angle required for a rocket’s first stage to reach a desired maximum altitude using custom numerical functions without relying on external libraries."
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
